@@ -1,0 +1,214 @@
+body {
+    margin: 0;
+    max-height: 100%;
+}
+
+#contenedor,
+#fondo {
+    width: 100%;
+}
+
+#contenedor {
+    height: 100%;
+    overflow-y: hidden; 
+    overflow-x: hidden;
+}
+
+body {
+    overflow-y: hidden; 
+    overflow-x: hidden;
+}
+
+#fondo {
+    height: 100%;
+    background: url("images/galax1.png") repeat-x;
+    background-size: 1280px 100%;
+    position: absolute;
+    animation: sky 15s linear infinite;
+}
+
+.menu {
+    display: block;
+    position: absolute;
+    top: 25%;
+    left: 35%;
+}
+
+h1 {
+    font-size: 100px;
+    font-family: fantasy;
+    color: white;
+}
+
+.controls {
+    display: none;
+}
+
+h2 {
+    font-size: 50px;
+    font-family: fantasy;
+    color: white;
+    text-align: center;
+}
+
+p {
+    font-size: 25px;
+    font-family: fantasy;
+    color: white;
+    text-align: center;
+}
+
+
+button {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    color: white;
+    font-family: fantasy;
+    font-size: 20px;
+    border-radius: 50%;
+    margin-left: 50px;
+}
+
+@keyframes sky {
+    0% {
+        background-position: 1280px
+    }
+
+    100% {
+        background-position: 0
+    }
+}
+
+
+
+.nave {
+    width: 300px;
+    height: 169px;
+    z-index: 1;
+    position: absolute;
+    bottom: 18%;
+    left: 100px;
+    background: url("images/nave1.png") repeat-x;
+}
+
+.elevar {
+    animation: elevar 800ms cubic-bezier(0,0,.5,1) forwards; 
+}
+
+.caer {
+    animation: caer 600ms cubic-bezier(0,0,.5,1) forwards;
+}
+
+@keyframes elevar {
+    from {
+        bottom: 18%;
+    }
+    to {
+        bottom: 70%;
+    }
+   
+}
+
+@keyframes caer {
+    from {
+        bottom: 70%;
+    }
+    to {
+        bottom: 18%;
+    }
+}
+
+
+
+
+.enemigo {
+    position: relative;
+    bottom: auto;
+    width: 200px;
+    height: 250px;
+    background: url("images/rayo2.png") repeat-x;
+    animation: enemigo 2s steps(4) infinite, 
+                mover 5s forwards linear;
+}
+
+@keyframes enemigo {
+    0% {
+        background-position: 0px
+    }
+
+    100% {
+        background-position: -800px
+    }
+    
+}
+
+
+@keyframes mover {
+    from {
+      left: 100%;
+    }
+    to {
+      left: -10%;
+    }
+}
+
+.explote {
+    position: absolute;
+    bottom: 30%;
+    width: 360px;
+    height: 425px;
+    background: url("images/explote.png") repeat-x;
+    animation: explotar 2s steps(7) forwards;
+}
+
+@keyframes explotar {
+    0% {
+        background-position: 0px
+    }
+    100% {
+        background-position: -2520px
+    }
+}
+
+.pyl {
+    display: none;
+    flex-direction: row;
+}
+
+.points {
+    align-items: center;
+    font-family: fantasy;
+    font-size: 25px;
+    height: 60px;
+    margin-left: 30%;
+    color: white;
+}
+
+.lifes {
+    font-family: fantasy;
+    font-size: 25px;
+    height: 60px;
+    margin-left: 10%;
+    color: white;
+}
+
+.time {
+    font-family: fantasy;
+    font-size: 25px;
+    height: 60px;
+    margin-left: 15%;
+    color: white;
+}
+
+.gameOver {
+    display: none;
+    position: absolute;
+    margin-left: 30%;
+}
+
+.win {
+    display: none;
+    position: absolute;
+    margin-left: 30%;
+}

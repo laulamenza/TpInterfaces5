@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Juego</title>
+</head>
+<body>
+    <div id="contenedor">
+        <div id="fondo">
+            <div class="pyl" id="pyl">
+                 <div class="lifes" >
+                    Vidas: <span id="lifes">3</span>
+                 </div>
+                 <div class="points" >
+                    Puntos: <span id="points">0</span>
+                 </div>
+                 <div class="time" >
+                    Tiempo: <span id="time">60</span>
+                 </div>
+            </div>
+           
+            <div class="menu" id="menu">
+                <h1>Apollo 2023</h1>
+                <button type="button" id="play">Play</button>
+                <button type="button" id="controls">Controls</button>
+                <button type="button" id="music">Musica</button>
+            </div>
+            <div class="controls" id="contr">
+                <h2>Instrucciones de juego</h2>
+                <p>La nave se controla con las flechas hacia arriba y hacia abajo, al esquivar los rayos se suman 100 puntos.</p>
+                <button type="button" id="volver">Volver</button>
+            </div>
+        </div>
+    </div>
+    <div class="gameOver" id="gameOver">
+        <h1>GAME OVER</h1>
+        <button type="button" id="restart">Ir al Menu</button>
+    </div>
+    <div class="win" id="win">
+        <h1>WINNER</h1>
+        <button type="button" id="irMenu">Ir al menu</button>
+    </div>
+    <script src="enemy.js"></script>
+    <script src="nave.js"></script>
+    <script src="game.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
